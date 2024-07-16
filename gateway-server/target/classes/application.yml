@@ -26,6 +26,14 @@ spring:
         filters:
         - RewritePath=/sprinkler/(?<path>.*), /$\{path}
 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekaserver:8073/eureka/
 
 management:
   endpoints:
