@@ -46,4 +46,11 @@ management:
   endpoint:
     gateway:
       enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
         
