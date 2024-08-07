@@ -1,0 +1,5 @@
+/gateway-server/target/
+/.idea/
+/gateway-server/.settings/
+*.classpath
+*.project

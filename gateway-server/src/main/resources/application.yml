@@ -13,18 +13,21 @@ spring:
         - Path=/notification/**
         filters:
         - RewritePath=/notification/(?<path>.*), /$\{path}
+        - RemoveRequestHeader= Cookie,Set-Cookie
       - id: music-service
         uri: lb://music-service
         predicates:
         - Path=/music/**
         filters:
         - RewritePath=/music/(?<path>.*), /$\{path}
+        - RemoveRequestHeader= Cookie,Set-Cookie
       - id: sprinkler-service
         uri: lb://sprinkler-service
         predicates:
         - Path=/sprinkler/**
         filters:
         - RewritePath=/sprinkler/(?<path>.*), /$\{path}
+        - RemoveRequestHeader= Cookie,Set-Cookie
 
 eureka:
   instance:
