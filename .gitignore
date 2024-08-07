@@ -3,3 +3,4 @@
 /gateway-server/.settings/
 *.classpath
 *.project
+/gateway-server/bin/
